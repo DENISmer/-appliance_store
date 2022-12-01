@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E86E706-0FCF-43A2-B40F-597377C6B493}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ООО__Столовые_приборы_</RootNamespace>
+    <AssemblyName>ООО «Столовые приборы»</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASSES\UserData.cs" />
+    <Compile Include="COMPONENTS\Admin_products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPONENTS\Admin_products.Designer.cs">
+      <DependentUpon>Admin_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMPONENTS\Admin_productsBase.cs" />
+    <Compile Include="COMPONENTS\Admin_productsBaseBase.cs" />
+    <Compile Include="COMPONENTS\Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPONENTS\Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMPONENTS\Captcha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPONENTS\Captcha.Designer.cs">
+      <DependentUpon>Captcha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMPONENTS\ProductsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPONENTS\ProductsView.Designer.cs">
+      <DependentUpon>ProductsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="COMPONENTS\Admin_products.resx">
+      <DependentUpon>Admin_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMPONENTS\Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMPONENTS\Captcha.resx">
+      <DependentUpon>Captcha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMPONENTS\ProductsView.resx">
+      <DependentUpon>ProductsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMAGES\B736H6 - Копировать.jpg" />
+    <Content Include="IMAGES\B736H6.jpg" />
+    <Content Include="IMAGES\D735T5 - Копировать.jpg" />
+    <Content Include="IMAGES\D735T5.jpg" />
+    <Content Include="IMAGES\E732R7.jpg" />
+    <Content Include="IMAGES\F573T5.jpg" />
+    <Content Include="IMAGES\G387Y6.jpg" />
+    <Content Include="IMAGES\H384H3.jpg" />
+    <Content Include="IMAGES\icon.ico" />
+    <Content Include="IMAGES\K437E6.jpg" />
+    <Content Include="IMAGES\picture.png" />
+    <Content Include="IMAGES\R836H6.jpg" />
+    <Content Include="IMAGES\T793T4.jpg" />
+    <Content Include="IMAGES\А112Т4.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
